@@ -106,7 +106,7 @@
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
 DROP TABLE IF EXISTS movies;
-DROP TABLE IF EXISTS acotrs;
+DROP TABLE IF EXISTS actors;
 DROP TABLE IF EXISTS relationship_between_movies_and_actors;
 
 -- Create new tables, according to your domain model
@@ -177,6 +177,7 @@ INSERT INTO movies (
 
 -- The SQL statement for the movies output
 -- TODO!
+SELECT title FROM movies
 
 -- Prints a header for the cast output
 .print ""
