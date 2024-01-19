@@ -237,8 +237,68 @@ INSERT INTO actors (
 );
 
 INSERT INTO roles (
-    
-)
+    character
+) VALUES (
+    "Bruce Wayne"
+);
+
+INSERT INTO roles (
+    character
+) VALUES (
+    "Alfred"
+);
+
+INSERT INTO roles (
+    character
+) VALUES (
+    "Ra's Al Ghul"
+);
+
+INSERT INTO roles (
+    character
+) VALUES (
+    "Rachel Dawes"
+);
+
+INSERT INTO roles (
+    character
+) VALUES (
+    "Commissioner Gordon"
+);
+
+INSERT INTO roles (
+    character
+) VALUES (
+    "Joker"
+);
+
+INSERT INTO roles (
+    character
+) VALUES (
+    "Harvey Dent"
+);
+
+INSERT INTO roles (
+    character
+) VALUES (
+    "Bane"
+);
+
+INSERT INTO roles (
+    character
+) VALUES (
+    "John Blake"
+);
+
+INSERT INTO roles (
+    character
+) VALUES (
+    "Selina Kyle"
+);
+
+
+
+
 
 -- Prints a header for the movies output
 .print "Movies"
@@ -258,3 +318,8 @@ SELECT title, year, rating, studio FROM movies;
 
 -- The SQL statement for the cast output
 -- TODO!
+SELECT movies.title, actors.name, character.roles 
+FROM movies 
+INNER JOIN actors
+INNER JOIN roles
+ON movies.id = roles.movie_id, actors.id = roles.actor_id;
