@@ -107,7 +107,7 @@
 -- TODO!
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS actors;
-DROP TABLE IF EXISTS relationship_between_movies_and_actors;
+DROP TABLE IF EXISTS roles;
 
 -- Create new tables, according to your domain model
 -- TODO!
@@ -124,7 +124,7 @@ CREATE TABLE actors (
     name TEXT
 );
 
-CREATE TABLE relationship_between_movies_and_actors (
+CREATE TABLE roles (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     movie_id INTEGER,
     actor_id INTEGER,
@@ -170,6 +170,76 @@ INSERT INTO movies (
     "Warner Bros."
 );
 
+INSERT INTO actors (
+    name
+) VALUES (
+    "Christian Bale"
+);
+
+INSERT INTO actors (
+    name
+) VALUES (
+    "Liam Neeson"
+);
+
+INSERT INTO actors (
+    name
+) VALUES (
+    "Michael Caine"
+);
+
+INSERT INTO actors (
+    name
+) VALUES (
+    "Katie Holmes"
+);
+
+INSERT INTO actors (
+    name
+) VALUES (
+    "Gary Oldman"
+);
+
+INSERT INTO actors (
+    name
+) VALUES (
+    "Heath Ledger"
+);
+
+INSERT INTO actors (
+    name
+) VALUES (
+    "Aaron Eckhart"
+);
+
+INSERT INTO actors (
+    name
+) VALUES (
+    "Maggie Gyllenhaal"
+);
+
+INSERT INTO actors (
+    name
+) VALUES (
+    "Tom Hardy"
+);
+
+INSERT INTO actors (
+    name
+) VALUES (
+    "Joseph Gordon-Levitt"
+);
+
+INSERT INTO actors (
+    name
+) VALUES (
+    "Anne Hathaway"
+);
+
+INSERT INTO roles (
+    
+)
+
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
@@ -177,7 +247,7 @@ INSERT INTO movies (
 
 -- The SQL statement for the movies output
 -- TODO!
-SELECT title FROM movies
+SELECT title, year, rating, studio FROM movies;
 
 -- Prints a header for the cast output
 .print ""
